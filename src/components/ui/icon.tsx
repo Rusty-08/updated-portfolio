@@ -1,15 +1,16 @@
-import dynamic from 'next/dynamic'
-import { LucideProps } from 'lucide-react'
-import dynamicIconImports from 'lucide-react/dynamicIconImports'
+'use client'
 
-interface IconProps extends LucideProps {
-  name: keyof typeof dynamicIconImports
+import { cn } from '@/lib/utils'
+import { Icon, IconProps } from '@iconify/react/dist/iconify.js'
+import { ClassNameValue } from 'tailwind-merge'
+
+type CustomIconProps = {
+  icon: string
+  className?: ClassNameValue
+} & IconProps
+
+const CustomIcon = ({ icon, className, ...props }: CustomIconProps) => {
+  return <Icon className={cn('text-xl', className)} icon={icon} {...props} />
 }
 
-const Icon = ({ name, ...props }: IconProps) => {
-  const LucideIcon = dynamic(dynamicIconImports[name])
-
-  return <LucideIcon {...props} />
-}
-
-export default Icon
+export default CustomIcon

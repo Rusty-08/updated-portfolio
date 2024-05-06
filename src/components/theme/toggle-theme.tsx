@@ -21,12 +21,12 @@ export function ThemeToggle({ ...props }) {
 
   return (
     <Button
-      variant='ghost'
+      variant='link'
       size='icon'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       {...props}
     >
-      <Icon name={theme === 'dark' ? 'moon' : 'sun'} />
+      <Icon icon={theme === 'dark' ? 'lucide:moon' : 'lucide:sun'} />
     </Button>
   )
 }

@@ -4,17 +4,17 @@ export const site = {
   media: [
     {
       name: 'Facebook',
-      icon: 'facebook',
+      icon: 'lucide:facebook',
       link: 'https://www.facebook.com/gunaorusty',
     },
     {
       name: 'LinkedIn',
-      icon: 'linkedin',
+      icon: 'lucide:linkedin',
       link: 'https://www.linkedin.com/in/gunaorusty/',
     },
     {
       name: 'GitHub',
-      icon: 'github',
+      icon: 'lucide:github',
       link: 'https://github.com/Rusty-08/',
     },
   ],

@@ -3,7 +3,7 @@ import { projects } from './projects-data'
 
 const Projects = () => {
   return (
-    <div>
+    <div className='flex flex-col justify-center gap-20'>
       {projects.map((project, index) => (
         <Project
           key={index}
@@ -12,6 +12,8 @@ const Projects = () => {
           image={project.image}
           href={project.href}
           github={project.github}
+          techs={project.techs}
+          index={index}
         />
       ))}
     </div>
