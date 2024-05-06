@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,6 +35,8 @@
     --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
+
+    --space-mono: 'Space Mono', monospace;
   }
 
   .dark {
@@ -63,6 +67,8 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+
+    --space-mono: 'Space Mono', monospace;
   }
 }
 
@@ -72,5 +78,28 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* background-image: radial-gradient(
+        at 40% 20%,
+        hsl(var(--background), 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 80% 0%, hsl(var(--secondary-foreground), 1) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(var(--secondary), 1) 0px, transparent 50%),
+      radial-gradient(
+        at 80% 50%,
+        hsl(var(--secondary-foreground), 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 0% 100%,
+        hsl(var(--secondary), 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 80% 100%,
+        hsl(var(--secondary-foreground), 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 0% 0%, hsl(var(--secondary), 1) 0px, transparent 50%); */
   }
 }
