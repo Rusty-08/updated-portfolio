@@ -1,5 +1,6 @@
 export const site = {
   name: 'Kaizokuō',
+  owner: 'Rusty Gunao',
   description: 'A Portfolio Website of Rusty Gunao',
   media: [
     {

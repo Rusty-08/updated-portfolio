@@ -1,15 +1,18 @@
+import Contacts from '@/components/contacts'
 import Hero from '@/components/hero'
 import Navbar from '@/components/navbar'
 import Projects from '@/components/projects'
-import { ThemeToggle } from '@/components/theme/toggle-theme'
 
 export default function Home() {
   return (
-    <main className='flex flex-col items-center justify-center container'>
+    <main className='flex flex-col items-center justify-center container overflow-hidden p-4'>
       <Navbar />
       <Hero />
-      <div className="p-8 py-16 flex justify-center">
+      <div className='md:px-8 px-0 py-24 flex justify-center'>
         <Projects />
+      </div>
+      <div id='contact' className='md:px-8 px-0 md:pt-24 md:pb-10'>
+        <Contacts />
       </div>
     </main>
   )

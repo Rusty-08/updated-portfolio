@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import CustomIcon from '@/components/ui/icon'
 
 type ProjectProps = {
+  date: string
   title: string
   description: string
   image: StaticImageData
@@ -13,28 +14,33 @@ type ProjectProps = {
 }
 
 const Project = (props: ProjectProps) => {
-  const { title, description, image, href, github, index, techs } = props
+  const { date, title, description, image, href, github, index, techs } = props
 
   return (
-    <div className={`flex gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+    <div
+      className={`flex gap-8 items-center ${
+        index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+      } flex-col`}
+    >
       <Image
         src={image}
         alt={title}
         width={0}
         height={0}
-        className='w-[30rem] h-auto rounded-md'
+        className='md:w-[30rem] w-full h-auto rounded-md'
       />
-      <div className="flex flex-col gap-8 w-[30rem]">
+      <div className='flex flex-col gap-8 md:w-[30rem] w-full'>
         <div className='flex flex-col gap-2'>
-          <h3 className='text-xl font-semibold'>
-            <span className='font-space-mono'>{`0${index + 1}.`}{' '}</span>
-            {title}
-          </h3>
+          <div className='flex items-center text-muted-foreground gap-2'>
+            <CustomIcon icon='bx:bxs-calendar' height={16} />
+            <p className='text-sm'>{date}</p>
+          </div>
+          <h3 className='text-xl font-semibold'>{title}</h3>
           <p className='text-muted-foreground'>{description}</p>
         </div>
-        <div className="flex gap-4 items-center">
-          {techs.map(tech => (
-            <CustomIcon icon={tech} />
+        <div className='flex gap-4 items-center'>
+          {techs.map((tech) => (
+            <CustomIcon key={tech} icon={tech} />
           ))}
         </div>
         <div className='flex items-center gap-4'>
