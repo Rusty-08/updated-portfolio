@@ -10,11 +10,11 @@ export const projects = [
     href: '',
     github: '',
     techs: [
-      'logos:nextjs-icon',
+      'teenyicons:nextjs-solid',
       'akar-icons:typescript-fill',
       'fluent-mdl2:react-logo',
       'simple-icons:shadcnui',
-      'mdi:tailwind',
+      'ri:tailwind-css-fill',
     ],
   },
   {
@@ -26,11 +26,11 @@ export const projects = [
     href: '',
     github: '',
     techs: [
-      'devicon:nextjs',
+      'teenyicons:nextjs-solid',
       'akar-icons:typescript-fill',
       'fluent-mdl2:react-logo',
       'simple-icons:shadcnui',
-      'mdi:tailwind',
+      'ri:tailwind-css-fill',
     ],
   },
   {
@@ -42,11 +42,11 @@ export const projects = [
     href: '',
     github: '',
     techs: [
-      'devicon:nextjs',
+      'teenyicons:nextjs-solid',
       'akar-icons:typescript-fill',
       'fluent-mdl2:react-logo',
       'simple-icons:shadcnui',
-      'mdi:tailwind',
+      'ri:tailwind-css-fill',
     ],
   },
 ]

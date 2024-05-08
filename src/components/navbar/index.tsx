@@ -3,8 +3,10 @@ import { ThemeToggle } from '@/components/theme/toggle-theme'
 
 const Navbar = () => {
   return (
-    <div className='flex w-full md:h-20 h-16 md:px-8 px-4 items-center justify-between'>
-      <h1 className='font-semibold md:text-3xl text-2xl'>{site.name}</h1>
+    <div className='flex z-50 w-full absolute top-0 md:h-28 h-20 md:px-16 px-6 items-center justify-between'>
+      <h1 className='font-semibold md:text-3xl text-2xl bg-gradient-to-r from-primary to-fuchsia-900 bg-clip-text text-transparent'>
+        {site.name}
+      </h1>
       <ThemeToggle />
     </div>
   )

@@ -1,17 +1,15 @@
 import Contacts from '@/components/contacts'
 import Hero from '@/components/hero'
-import Navbar from '@/components/navbar'
 import Projects from '@/components/projects'
 
 export default function Home() {
   return (
-    <main className='flex flex-col items-center justify-center container overflow-hidden p-4'>
-      <Navbar />
+    <main className='flex px-0 flex-col w-full items-center justify-center container overflow-hidden'>
       <Hero />
-      <div className='md:px-8 px-0 py-24 flex justify-center'>
+      <div className='md:px-8 px-4 py-10 flex justify-center'>
         <Projects />
       </div>
-      <div id='contact' className='md:px-8 px-0 md:pt-24 md:pb-10'>
+      <div id='contact' className='md:px-8 w-full md:pt-16 pt-10 pb-10'>
         <Contacts />
       </div>
     </main>

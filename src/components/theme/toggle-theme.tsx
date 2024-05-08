@@ -22,6 +22,7 @@ export function ThemeToggle({ ...props }) {
   return (
     <Button
       variant='ghost'
+      className='text-primary'
       size='icon'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       {...props}

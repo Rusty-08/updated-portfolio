@@ -4,17 +4,28 @@ import { site } from '@/config/site'
 import { Button } from '@/components/ui/button'
 import SubHeader from '@/components/@core/subheader'
 import Link from 'next/link'
+import Image from 'next/image'
+import Navbar from '@/components/navbar'
 
 const Hero = () => {
   return (
-    <div
-      className='flex relative w-full flex-col justify-center items-center'
-      style={{ height: 'calc(100dvh - 6rem)' }}
-    >
-      <div className='w-full flex pb-16 justify-center flex-col items-center gap-5'>
+    <div className='flex relative h-dvh w-full flex-col justify-center items-center'>
+      <Navbar />
+      <Image
+        src='/hero.svg'
+        alt=''
+        draggable={false}
+        width={0}
+        height={0}
+        className='absolute inset-0 h-full w-full object-cover'
+      />
+      <div className='w-full px-4 z-10 flex pb-10 justify-center flex-col items-center gap-5'>
         <SubHeader icon='lucide:code' name='Frontend Developer' />
         <h1 className='font-semibold md:text-5xl text-4xl text-center'>
-          {site.name}. {site.owner}
+          <span className='bg-gradient-to-r from-primary to-fuchsia-900 bg-clip-text text-transparent'>
+            {site.name}.
+          </span>{' '}
+          {site.owner}
         </h1>
         <p className='text-center text-muted-foreground text-lg lg:w-[30rem] w-full'>
           Creating captivating web experiences that will leave a lasting

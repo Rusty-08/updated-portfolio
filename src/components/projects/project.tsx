@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
 import { Button } from '@/components/ui/button'
 import CustomIcon from '@/components/ui/icon'
+import GradientTop from '../@core/gradients/top-border'
 
 type ProjectProps = {
   date: string
@@ -22,13 +23,15 @@ const Project = (props: ProjectProps) => {
         index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
       } flex-col`}
     >
-      <Image
-        src={image}
-        alt={title}
-        width={0}
-        height={0}
-        className='md:w-[30rem] w-full h-auto rounded-md'
-      />
+      <div className='md:w-[30rem] w-full h-auto'>
+        <Image
+          src={image}
+          alt={title}
+          width={0}
+          height={0}
+          className='w-full h-full rounded-xl'
+        />
+      </div>
       <div className='flex flex-col gap-8 md:w-[30rem] w-full'>
         <div className='flex flex-col gap-2'>
           <div className='flex items-center text-muted-foreground gap-2'>
@@ -39,7 +42,7 @@ const Project = (props: ProjectProps) => {
           <p className='text-muted-foreground'>{description}</p>
         </div>
         <div className='flex gap-4 items-center'>
-          {techs.map((tech) => (
+          {techs.map((tech, idx) => (
             <CustomIcon key={tech} icon={tech} />
           ))}
         </div>
