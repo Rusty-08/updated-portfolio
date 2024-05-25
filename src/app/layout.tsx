@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google'
 import { cn } from '@/lib/utils'
 import { site } from '@/config/site'
 import { ThemeProvider } from '@/components/theme/theme-provider'
+import ScrollUp from '@/components/@core/scroll/scroll-up'
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -32,21 +33,22 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
         className={cn(
           'min-h-screen bg-background antialiased',
-          poppins.className
+          poppins.className,
         )}
       >
         <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
+          attribute="class"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
           {children}
         </ThemeProvider>
+        <ScrollUp />
       </body>
     </html>
   )
